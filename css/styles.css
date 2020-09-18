@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap');
 
+html {
+    font-size: 100%;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -144,6 +148,7 @@ Welcome Section
     font-size: 1.5rem;
     line-height: 200%;
     width: 90%;
+    text-align: justify;
 }
 
 .my-picture {
@@ -248,6 +253,9 @@ section.projects > h1 { /* Points to the projects section title. */
 .email-contact {
     background-color: rgb(50,50,50);
     padding: 2rem;
+    /* This is to hide the email section for now */
+    visibility: hidden;
+    display: none;
 }
 
 .email-contact-title {
@@ -255,7 +263,7 @@ section.projects > h1 { /* Points to the projects section title. */
 }
 
 .email-contact input {
-    width: 300px;
+    width: 100%;
     height: 25px;
     margin: 1rem auto;
     border: none;
@@ -299,7 +307,11 @@ section.projects > h1 { /* Points to the projects section title. */
     height: 75px;
     border-style: solid;
     border-color: grey;
-    border-width: 0px 2px;
+    border-width: 0px 0.125rem;
+
+    /* This is to hide the email section for now */
+    visibility: hidden;
+    display: none;
 }
 
 
@@ -329,6 +341,7 @@ section.projects > h1 { /* Points to the projects section title. */
     .about-me-paragraph {
         line-height: 150%;
     }
+
 } 
 
 @media only screen and (max-width: 58.125rem) {
@@ -348,5 +361,23 @@ section.projects > h1 { /* Points to the projects section title. */
         width: 80%;
         padding-left: 10%;
         padding-right: 10%;
+    }
+
+     /*
+        CONTACT SECTION
+    */
+    .contact-me {
+        flex-direction: column;
+    }
+
+    .vertical-separator {
+        border-width: 0.125rem 0px;
+        width: 75%;
+        height: 0;
+        margin: 0 auto;
+    }
+
+    .submit-email {
+        margin: auto;
     }
 }
