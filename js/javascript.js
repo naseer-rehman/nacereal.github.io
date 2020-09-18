@@ -1,4 +1,12 @@
 let welcomeTitle = document.getElementById("welcomeTitle");
+let scrollDownLabel = document.getElementById("scrollDownLabel");
+let progress = 0;
+
+let FLASH_TIME = 4000; // miliseconds
+let refreshTime = 33; // milliseconds
+
+let finishedWelcomeAnimation = false;
+let cursorShowingOnWelcomeTitle = false;
 
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
@@ -13,7 +21,23 @@ async function typeWrite(text, element) {
         element.innerHTML = currentText;
     }
     console.log("Completed typewrite animation!");
+    finishedWelcomeAnimation = true;
 }
 
-typeWrite("Welcome!", welcomeTitle);
+let f = function(time) {
+    return -1 * Math.cos(Math.PI * 2 * time / FLASH_TIME ) + 1
+}
+
+function flashScrollDownLabel() {
+    progress += refreshTime;
+
+    if (progress >= FLASH_TIME) {
+        progress = progress % FLASH_TIME;
+    }
+
+    scrollDownLabel.style.opacity = f(progress);
+}
+
+typeWrite("Welcome.", welcomeTitle);
+setInterval(flashScrollDownLabel, refreshTime);
 console.log("Loaded javascript file!");
