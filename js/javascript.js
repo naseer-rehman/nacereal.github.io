@@ -41,3 +41,19 @@ function flashScrollDownLabel() {
 typeWrite("Welcome.", welcomeTitle);
 setInterval(flashScrollDownLabel, refreshTime);
 console.log("Loaded javascript file!");
+
+// This is to take into account mobile's browser address bar inset
+
+let resizeViewportheight = () => {
+    if (window.innerHeight > 0) {
+        let vh = window.innerHeight * 0.01;
+        console.log(vh);
+        document.getElementsByClassName(".welcome-section")[0].style.height = vh * 100;
+    } else { console.log("INNNER HEIGHT IS 0!") }
+}
+
+resizeViewportheight()
+
+window.addEventListener('resize', () => {
+    resizeViewportheight()
+})
