@@ -156,6 +156,7 @@ Welcome Section
 }
 
 .my-picture {
+    position: sticky;
     object-fit: cover;
     width: auto;
     height: 23.7vh;
@@ -217,6 +218,13 @@ section.projects > h1 { /* Points to the projects section title. */
     font-size: 2.22vh;
     width: 60%;
     /* bottom: 0; */
+}
+
+a.disabled-project-link {
+    background-color: rgb(150,150,150);
+    cursor: default;
+    pointer-events: none;
+    content: '-------';
 }
 
 .project-languages { 
@@ -318,6 +326,29 @@ section.projects > h1 { /* Points to the projects section title. */
     display: none;
 }
 
+
+/*
+    SOCIALS SECTION
+*/
+
+
+.social-networks-container {
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.social-network {
+    margin: auto 1.525vw;
+}
+
+.social-network-img {
+    object-fit: cover;
+    width: auto;
+    height: 8.8875vh;
+}
 
 
 
