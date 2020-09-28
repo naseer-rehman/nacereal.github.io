@@ -152,7 +152,6 @@ Welcome Section
     font-size: 1.5rem;
     line-height: 200%;
     width: 90%;
-    text-align: justify;
 }
 
 .my-picture {
@@ -164,6 +163,9 @@ Welcome Section
     border-radius: 5%;
 }
 
+.hobbies-list {
+    list-style-type: circle;
+}
 
 /*
     PROJECTS SECTION
@@ -342,14 +344,21 @@ a.disabled-project-link {
 
 .social-network {
     margin: auto 1.525vw;
+    margin-top: 2.5vh;
 }
 
 .social-network-img {
     object-fit: cover;
     width: auto;
-    height: 8.8875vh;
+    height: 4.44375vh;
 }
 
+#websiteNotice.about-me-paragraph {
+    margin: 0;
+    bottom: 0;
+    text-align: center;
+    width: auto;
+}
 
 
 @media only screen and (max-width: 550px) {

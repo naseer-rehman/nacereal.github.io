@@ -44,7 +44,7 @@ console.log("Loaded javascript file!");
 
 // This is to take into account mobile's browser address bar inset
 
-let welcomeSection = document.getElementById("welcomeSection")
+let welcomeSection = document.getElementById("welcomeSection");
 
 let resizeViewportheight = () => {
     if (window.innerHeight > 0) {
