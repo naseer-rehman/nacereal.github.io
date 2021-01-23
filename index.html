@@ -1,125 +1,246 @@
-<!DOCTYPE html>
+<!dOcTyPe html>
+<head>
+    <title>Naseer's Website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+</head>
+<body>
+    <div class="fixed-nav-bar hidden">
+        <div class="fixed-nav-bar-name-container">
+            <h2 class="fixed-nav-bar-name">Naseer Rehman</h2>
+        </div>
+        <div class="fixed-nav-bar-list-container hidden">
+            <ul class="fixed-nav-bar-list unselectable">
+                <li><a href="#ABOUT" class="fixed-nav-bar-link" id="aboutLinkFixedNavBar">ABOUT</a></li>
+                <li><a href="#PROJECTS" class="fixed-nav-bar-link" id="projectsLinkFixedNavBar">PROJECTS</a></li>
+                <li><a href="#CONTACT" class="fixed-nav-bar-link" id="contactLinkFixedNavBar">CONTACT</a></li>
+            </ul>
+        </div>
+        <button id="mobileSidebarOpenButton" class="fixed-nav-bar-dropdown-button unselectable hidden">
+            <span class="fixed-nav-bar-dropdown-button-text">☰</span>
+        </button>
+        <!-- <ul class="fixed-nav-bar-dropdown-list unselectable">
+            <li>
+                <a href="" class="fixed-nav-bar-dropdown-link">ABOUT</a>
+                <a href="" class="fixed-nav-bar-dropdown-link">PROJECTS</a>
+                <a href="" class="fixed-nav-bar-dropdown-link">CONTACT</a>
+            </li>
+        </ul> -->
+    </div>
 
-<html>
-	<head>
-		<meta charset="UTF-8">
-		<meta name="description" content="Hello! This is a website made by Naseer Rehman, a current student at the University of Waterloo. Visit the site to learn more!">
-		<meta name="keywords" content="Naseer, Rehman, naseer, rehman, waterloo, uwaterloo" >
-		<meta name="author" content="Naseer Rehman">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link href="css/styles.css" rel="stylesheet" type="text/css"> 
-		<title>Naseer's Webpage</title>
-	</head>
-	
-	<body>
-		<div class="navigation-bar">
-			<div class="name">
-				<h1>Naseer Rehman</h1>
-			</div>
-			<ul class="navigation-links">
-				<li><a href="#about"><b>ABOUT</b></a></li>
-				<li><a href="#contact"><b>CONTACT</b></a></li>
-			</ul>
-		</div>
+    <div class="side-bar-mobile-container hidden">
+        <div class="side-bar-list-container">
+            <button id="mobileSidebarCloseButton" class="side-bar-button unselectable">
+                <span class="side-bar-button-text">✖</span>
+            </button>
 
-		<section class="welcome-section" id="welcomeSection">
-			<h1 id="welcomeTitle">
-				Welcome
-			</h1>
-			<h2 id="scrollDownLabel">Scroll down</h2>
-		</section>
-		
-		<section class="about-me" id="about">
-			<div class="my-picture-container">
-				<img class="my-picture" src="https://cdn.discordapp.com/avatars/485160824587943979/308ae5fd4de25f2e28b7a749e973c14f.webp?size=256"/>
-			</div>
-			<aside class="about-me-body">
-				<h1 class="about-me-title">HELLO THERE</h1>
-				<p class="about-me-paragraph">
-					My name is Naseer Rehman. I am a current student at the University of Waterloo, majoring in Mathematics. I grew up having a keen interest in computers and decided I will pursue a software-related career during my time at Galt Collegiate Institute. My interest in mathematics and computer software led me to attend UW. I built this website from the ground-up as a first step toward achieving my future aspirations. I hope it isn’t too bad for my first website.
-				</p>
-				<!-- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas euismod arcu justo, at lobortis libero aliquet quis. Morbi mi nulla, luctus eget magna non, aliquam ultricies tellus. Curabitur nec bibendum lacus. Sed rutrum rutrum ex. Sed lectus massa, dapibus eu ultrices eget, pellentesque et nibh. Maecenas non dolor hendrerit, luctus justo sed, faucibus ligula. Etiam viverra arcu ut urna semper ornare. Integer pellentesque eros laoreet, gravida risus ac, tincidunt arcu. -->
+            <ul class="side-bar-list unselectable">
+                <li><a href="#ABOUT" class="side-bar-link">ABOUT</a></li>
+                <li><a href="#PROJECT" class="side-bar-link">PROJECTS</a></li>
+                <li><a href="#CONTACT" class="side-bar-link">CONTACT</a></li>
+            </ul>
+        </div>
+    </div>
 
-				<h1 class="about-me-title">HOBBIES</h1>
-				<ul class="hobbies-list">
-					<li>
-						<p class="about-me-paragraph">
-							My first hobby is related to building computers. I take an interest in the different hardware that is available to consumers and any new launches. I can’t wait for AMD’s new RDNA2 cards to release! The components I have in my current computer includes: R5 3600X, RX 580, 16 GB DDR4 and an X470-PRO motherboard. 
-						</p>
-					</li>
-					<li>
-						<p class="about-me-paragraph">
-							Learning to program is another hobby of mine. I like learning about new, challenging problems and methods to solve problems. My algo knowledge will further strengthen in CS136 and during my own spare time.
-						</p>
-					</li>
-					<li>
-						<p class="about-me-paragraph">
-							I would be lying if I said I was interested in computer parts and I didn't play video games. The game series that is by far my favourite has to be the Assassin's Creed series. Can't wait for Valhalla to release in November!
-						</p>
-					</li>
-				</ul>
-			</aside>
-			</section>
+    <!-- WELCOME SECTION -->
+    <section class="initial-page">
+        <div class="nav-bar">
+            <h1 class="name-title" >Naseer Rehman</h1>
+            
+            <ul class="nav-links">
+                <li> <a href="#ABOUT">ABOUT</a> </li>
+                <li> <a href="#PROJECTS">PROJECTS</a> </li>
+                <li> <a href="#CONTACT">CONTACT</a> </li>
+            </ul>
+        </div>
 
-		<section class="projects">
-			<h1>Fun Little Project(s)</h1>
-			<div class="projects-grid">
-				<!--
-					<div class="project-container">
-						<h1 class="project-title">Snake Game</h1>
-						<h2 class="project-languages">JavaScript, HTML, CSS</h2>
-						<img src="images/puzzle-piece.png" alt="stinky!" class="project-image">
-						<a href="" class="project-button">CLICK ME</a>
-					</div>
-				-->
-				<div class="project-container">
-					<h1 class="project-title">Soon...</h1>
-					<h2 class="project-languages">JavaScript, HTML, CSS</h2>
-					<img src="images/puzzle-piece.png" alt="stinky!" class="project-image">
-					<a href="" class="project-button disabled-project-link">CLICK ME</a>
-				</div>
-			</div>
+        <div class="welcome-title-container unselectable">
+            <div class="welcome-title-overflow" id="welcomeTitleOverflow">
+                <div class="welcome-title-text">
+                    <span class="welcome-text">Welcome</span>
+                </div>
+                <div class="cursor-line"></div>
+            </div>
+        </div>
+    </section>
 
-			<p class="about-me-paragraph" id="websiteNotice">
-				This website is still being constructed by me. Please bare with me while I still finalize this website.
-			</p>
-		</section>
-		
-		<section class="contact-me" id="contact">
-			<div class="email-contact">
-				<h1 class="email-contact-title">Hit me up!</h1>
-				<input type="text" class="name-box" placeholder="Your name" />
-				<input type="text" class="email-box" placeholder="Your email" />
-				<input type="text" class="message-box" placeholder="Your message" />
-				<div class="submit-email-container">
-					<button class="submit-email"><b>SUBMIT</b></button>
-				</div>
-			</div>
-			<div class="vertical-separator"></div>
-			<div class="social-networks-box">
-				<!-- <h1 class="social-networks-title">Social Networks</h1> -->
+    <!-- ABOUT ME SECTION -->
+    <section id="ABOUT" class="about-me-section">
+        <h1 class="section-header">ABOUT ME</h1>
 
-				<div class="social-networks-container">
-					<div class="social-network">
-						<a class="social-network-link" href="https://www.instagram.com/nacereal/">
-							<img src="images/instagram-logo.png" alt="" class="social-network-img">
-						</a>
-						<h3 class="social-network-tag">@nacereal</h3>
-					</div>
-					<div class="social-network">
-						<a class="social-network-link" href="https://www.linkedin.com/in/naseer-rehman-026ba81b4">
-							<img src="images/linkedin-logo.png" alt="" class="social-network-img">
-						</a>
-						<h3 class="social-network-tag">Naseer Rehman</h3>
-					</div>
-				</div>
-				
-			</div>
-		</section>
+        <div class="about-me-content-container">
+            
+            <div class="my-image-column">
+                <div class="image-container">
+                    <img src="images/nacereal pfp.png" alt="" class="my-image undraggable unselectable">
+                </div>
+            </div>
 
-		
-		
+            <div class="paragraphs-container">
+                <div class="first-sentence-container">
+                    <p class="first-sentence">Hello, my name is Naseer Rehman.</p>
+                </div>
 
-		<script type="text/javascript" src="js/javascript.js"></script>
-	</body>
-</html>
+                <div class="about-me-paragraph-pairs-container">
+                    <div class="about-me-paragraph-pair">
+                        <div class="about-me-paragraph-container">
+                            <p class="about-me-paragraph">
+                                I am an aspiring programmer and technology enthusiast that is dedicated to advancing my career in these fields.
+                            </p>
+                        </div>
+                        <div class="about-me-image-container">
+                            <div class="about-me-image-aspect-ratio">
+                                <img src="images/pc-display-icon.png" alt="" class="about-me-image">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-me-paragraph-pair">
+                        <div class="about-me-paragraph-container">
+                            <p class="about-me-paragraph">
+                                I am currently enrolled as a first-year student in the Mathematics program at the University of Waterloo.
+                            </p>
+                        </div>
+                        <div class="about-me-image-container">
+                            <div class="about-me-image-aspect-ratio">
+                                <img src="images/uw logo.jpg" alt="" class="about-me-image">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-me-paragraph-pair">
+                        <div class="about-me-paragraph-container">
+                            <p class="about-me-paragraph">
+                                When I am not studying, I like to spend my free time building computers, learning to program, and playing video games.
+                            </p>
+                        </div>
+                        <div class="about-me-image-container">
+                            <div class="about-me-image-aspect-ratio">
+                                <img src="images/controller.png" alt="" class="about-me-image">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-me-paragraph-pair">
+                        <div class="about-me-paragraph-container">
+                            <p class="about-me-paragraph">
+                                I built this website as a learning exercise for myself and I will create more applications as I cultivate my knowledge.
+                            </p>
+                        </div>
+                        <div class="about-me-image-container">
+                            <div class="about-me-image-aspect-ratio">
+                                <img src="images/code-image-or-something.png" alt="" class="about-me-image">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="PROJECTS" class="projects-section">
+        <h1 class="section-header">PROJECTS</h1>
+
+        <div class="project-cards-container-mobile">
+            <!-- <div class="project-card">
+                <div class="project-image-container">
+                    <img src="images/puzzle-piece.png" alt="" class="project-image undraggable">
+                </div>
+
+                <div class="project-details-container">
+                    <h3 class="project-name">Project Name</h3>
+                    <div class="description-container">
+                        <p class="project-description">Description</p>
+                    </div>
+                </div>
+                <div class="project-link-container">
+                    <a href="" class="project-link">
+                        <div class="project-link-text-background">
+                            <span class="project-link-text">🡵</span>
+                        </div>
+                    </a>
+                </div>
+            </div> -->
+
+            <div class="project-card">
+                <div class="project-image-container">
+                    <img src="images/puzzle-piece.png" alt="" class="project-image undraggable">
+                </div>
+
+                <div class="project-details-container">
+                    <h3 class="project-name">Project Name</h3>
+                    <div class="description-container">
+                        <p class="project-description">Description</p>
+                    </div>
+                </div>
+                <div class="project-link-container">
+                    <a href="" class="project-link">
+                        <div class="project-link-text-background">
+                            <span class="project-link-text">🡵</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-cards-container unselectable">
+            <!-- <div class="project-card">
+                <h3 class="project-name">Project Name</h3>
+                <div class="project-image-container">
+                    <img src="images/puzzle-piece.png" alt="" class="project-image undraggable">
+                </div>
+                <div class="description-container">
+                    <p class="project-description">
+                        Description
+                    </p>
+                </div>
+                <div class="project-link-container">
+                    <a href="" class="project-link">
+                        <div class="project-link-text-background">
+                            <span class="project-link-text">OPEN</span>
+                        </div>
+                    </a>
+                </div>
+            </div> -->
+            <div class="project-card">
+                <h3 class="project-name">Nothing yet...</h3>
+                <div class="project-image-container">
+                    <img src="images/puzzle-piece.png" alt="" class="project-image undraggable">
+                </div>
+                <div class="description-container">
+                    <p class="project-description">
+                        and i oop-
+                    </p>
+                </div>
+                <div class="project-link-container">
+                    <a href="/" class="project-link" disabled="disabled">
+                        <div class="project-link-text-background">
+                            <span class="project-link-text">OPEN</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT ME SECTION -->
+    <section id="CONTACT" class="contact-section">
+        <div class="contact-vertical-line-container">
+            <div class="contact-vertical-line"></div>
+        </div>
+
+        <div class="social-media-links-container">
+            <a href="" class="social-media-link">
+                <div class="social-media-image-container">
+                    <img src="images/instagram logo i guess.png" alt="" class="social-media-image">
+                </div>
+            </a>
+        </div>
+
+        <div class="email-link-container">
+            <a href="" class="email-link">rehmn.nas@gmail.com</a>
+        </div>
+    </section>
+
+    <script src="js/index.js"></script>
+</body>
