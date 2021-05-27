@@ -123,17 +123,16 @@ $(document).ready(() => {
     let sideBarListContainer = $("div.side-bar-list-container");
 
     let sideBarOpen = false;
+    const ANIMATION_TIME = 150;
 
     sideBarOpenButton.click(() => {
-        const ANIMATION_TIME = 300;
-
-        if (! sideBarOpen) {
+        if (!sideBarOpen) {
             disableScroll();
             sideBarOpen = true;
 
             sideBarContainer.css("background-color", "rgba(0,0,0,0)");
             sideBarContainer.removeClass("hidden");
-            sideBarContainer.animate({backgroundColor: "rgba(0,0,0,0.75)"}, 300, () => {
+            sideBarContainer.animate({backgroundColor: "rgba(0,0,0,0.75)"}, ANIMATION_TIME, () => {
                 console.log("Open!");
             });
 
@@ -149,7 +148,7 @@ $(document).ready(() => {
             sideBarListContainer.removeClass("side-bar-list-appearing");
     
             sideBarContainer.css("background-color", "rgba(0,0,0,0.75)");
-            sideBarContainer.animate({backgroundColor: "rgba(0,0,0,0)"}, 300, () => {
+            sideBarContainer.animate({backgroundColor: "rgba(0,0,0,0)"}, ANIMATION_TIME, () => {
                 console.log("Closed!");
                 sideBarContainer.addClass("hidden");
             });
