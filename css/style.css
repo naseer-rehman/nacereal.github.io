@@ -161,7 +161,7 @@ div.fixed-nav-bar {
     background-color: rgba(42,42,42,1);
 
     transform: translateX(100%);
-    transition: transform 300ms linear;
+    transition: transform 150ms linear;
 }
 
 .side-bar-list-appearing {
