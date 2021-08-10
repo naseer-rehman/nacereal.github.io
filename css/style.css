@@ -833,7 +833,7 @@ div.about-me-image-container {
         justify-content: space-evenly
     }
 
-    ul.nav-links > li {
+    ul.nav-links > li:first-child, ul.nav-links > li:last-child {
         padding: 0;
     }
 
