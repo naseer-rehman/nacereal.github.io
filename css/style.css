@@ -828,6 +828,15 @@ div.about-me-image-container {
         width: 100%;
     }
 
+    ul.nav-links {
+        align-items: center;
+        justify-content: space-evenly
+    }
+
+    ul.nav-links > li {
+        padding: 0;
+    }
+
     .my-image {
         /* make the image non-sticky for mobile */
         position: static;
