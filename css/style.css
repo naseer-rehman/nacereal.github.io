@@ -830,7 +830,7 @@ div.about-me-image-container {
 
     ul.nav-links {
         align-items: center;
-        justify-content: space-evenly
+        justify-content: space-evenly;
     }
 
     ul.nav-links > li:first-child, ul.nav-links > li:last-child {
