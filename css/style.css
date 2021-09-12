@@ -9,6 +9,8 @@
 
 html {
     scroll-behavior: smooth;
+    width: 100%;
+    height: 100%;
 }
 
 body {
@@ -19,6 +21,7 @@ body {
     padding: 0;
     font-size: 1rem;
     width: 100%;
+    height: 100%;
 }
 
 .unselectable {
@@ -102,7 +105,6 @@ div.fixed-nav-bar {
     font-size: 1.25rem;
     font-weight: bold;
     color: var(--base-text-color);
-    /* color: red; */
     text-decoration: none;
     transition: color 0.1s;
 }
@@ -257,19 +259,24 @@ div.nav-bar {
 }
 
 ul.nav-links > li:first-child , ul.nav-links > li:last-child {
-    padding: 0 10vw 0 10vw;
+    padding: 0 5vw 0 5vw;
 }
 
 ul.nav-links > li > a {
     font-size: 1.25rem;
     font-weight: bold;
     color: var(--base-text-color);
+    border: 0.1em solid;
+    padding: 0.15em 0.25em;
+    border-radius: 0.4em;
+    border-color: var(--base-text-color);
     text-decoration: none;
-    transition: color 0.1s, text-shadow 0.1s;
+    transition: color 0.1s, text-shadow 0.1s, border-color 0.1s;
 }
 
 ul.nav-links > li > a:hover {
     color: rgb(100,100,255);
+    border-color: rgb(100,100,255);
     text-shadow: 0px 0px 1px rgb(100,100,255);
     cursor: pointer;
 }
@@ -532,7 +539,16 @@ div.about-me-image-container {
 .project-name {
     font-size: 1.875rem;
     text-align: center;
-    margin: 20px 0 20px 0;
+    margin: 20px 0;
+    padding: 0 20px;
+    height: 22%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-name > span {
+   vertical-align: middle;
 }
 
 .project-image-container {
@@ -809,9 +825,15 @@ div.about-me-image-container {
     .project-cards-container {
         display: none;
     }
+
+    .project-name {
+       display: block;
+       padding: 0;
+       height: auto;
+    }
 }
 
-@media only screen and (min-width: 480px) and (max-width: 800px) {
+@media only screen and (min-width: 500px) and (max-width: 800px) {
     .project-cards-container-mobile .project-card {
         width: 70%;
     }
@@ -823,7 +845,7 @@ div.about-me-image-container {
 }
 
 /* For smaller screens, like the Moto G4 or something. */
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 500px) {
     body {
         width: 100%;
     }
