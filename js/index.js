@@ -172,7 +172,7 @@ $(document).ready(() => {
         getBorderOffset($("section.projects-section")), // Highlight projects
         getBorderOffset($("section.contact-section")), // Highlight contact
         $(document).height() // Max since it is the document's full height
-    ]
+    ];
     
     function getCurrentRegion() {
         let currentScroll = window.scrollY;
