@@ -1,0 +1,25 @@
+@use "./colors";
+@use "./ContentCard";
+
+.AboutCard {
+  @include ContentCard.contentCard;
+  
+  .about-me-photo-container {
+    text-align: center;
+    
+    > .about-me-photo {
+      width: 150px;
+      height: auto;
+      aspect-ratio: 1;
+    }
+  }
+
+  .paragraph-container {
+    margin-top: 0.5rem;
+    padding: 0 1.19%;
+    background: colors.$content-bg-color;
+    height: 59%;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+}

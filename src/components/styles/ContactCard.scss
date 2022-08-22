@@ -1,0 +1,9 @@
+@use "./ContentCard";
+
+.ContactCard {
+  @include ContentCard.contentCard;
+}
+
+.DinoCard {
+  @include ContentCard.contentCard;
+}

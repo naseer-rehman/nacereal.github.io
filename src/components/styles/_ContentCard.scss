@@ -1,0 +1,45 @@
+@use "./colors";
+
+@mixin contentCard() {
+  $offset: -6px;
+  $outline-width: 3px;
+  display: inline-block;
+  background: colors.$card-bg-color;
+  border: $outline-width solid colors.$outline-color;
+  box-shadow: $offset $offset colors.$outline-color;
+  position: relative;
+  left: -0.5 * $offset;
+  top: -0.5 * $offset;
+  margin: (-0.5 * $offset) 2vw 0 (calc((-0.5 * $offset + 2vw)));
+  width: 21.25vw;
+  // max-height: 725px;
+  padding: 25px;
+  vertical-align: bottom;
+  font-size: 1.125rem;
+  overflow: hidden;
+  // box-sizing: border-box;
+
+  h2 {
+    text-align: center;
+    font-size: 4rem;
+    margin: 0.6% 0 4.46% 0;
+  }
+
+  p, ul {
+    margin: 10px 0;
+  }
+
+  .text-center {
+    text-align: center;
+  }
+
+  .content-box {
+    border: 3px solid colors.$outline-color;
+    box-sizing: border-box;
+    background: colors.$content-bg-color;
+  }
+}
+
+.ContentCard {
+  // @include contentCard;
+}
