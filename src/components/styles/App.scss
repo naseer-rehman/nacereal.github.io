@@ -1,4 +1,6 @@
 @use "./colors";
+@use "./ContentCard";
+@use "sass:math";
 
 body, html {
   width: 100%;
@@ -10,22 +12,48 @@ body {
 }
 
 .App {
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  width: 100%; // Added new
+  height: 100%; // Added new
 
   .name-title-container {
     text-align: left;
-    width: 100%;
+    width: 80.41%; // Added new
   }
 
   .cards-container {
     display: flex;
+    width: 80.41%; // Added new
+    height: 67.12%; // Added new
+    $card-gap: 6.27%;
+
+    > * {
+      margin-left: math.div($card-gap, 2);
+      margin-right: math.div($card-gap, 2);
+    }
+  
+    > *:last-child {
+      margin-right: 0;
+    }
+  
+    > *:first-child {
+      margin-left: 0;
+    }
   }
 
   .stacked-cards-container {
-    display: flex;
-    justify-content: space-between;
+    display: inline-flex;
+    align-items: center;
     flex-direction: column;
+    justify-content: space-between;
+    width: 29.28%;
+    height: 100%;
+    box-sizing: border-box;
+    position: relative;
+    left: -0.5 * ContentCard.$offset;
+    // margin: (-0.5 * ContentCard.$offset) 0 0 (calc((-0.5 * ContentCard.$offset))); // Removed 2vw left/right
   }
 }

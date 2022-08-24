@@ -20,6 +20,11 @@ body {
   align-items: center;
 }
 
+#root {
+  width: 100%;
+  height: 100%;
+}
+
 button {
   background: colors.$content-bg-color;
   border: 3px solid colors.$outline-color;
@@ -33,4 +38,27 @@ button:hover {
 
 img {
   border: 3px solid colors.$outline-color;
+}
+
+.icon-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  > svg {
+    fill: colors.$outline-color;
+    height: 100%;
+    width: auto;
+    aspect-ratio: 1;
+  }
+
+  &:hover {
+    > svg {
+      $shadow-red: red(colors.$outline-color);
+      $shadow-green: green(colors.$outline-color);
+      $shadow-blue: blue(colors.$outline-color);
+      $shadow-opacity: 0.75;
+      filter: drop-shadow(0 0 2px rgba($shadow-red, $shadow-green, $shadow-blue, $shadow-opacity));
+    }
+  }
 }

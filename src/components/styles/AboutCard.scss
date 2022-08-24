@@ -3,20 +3,29 @@
 
 .AboutCard {
   @include ContentCard.contentCard;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 29.28%;
+  height: 100%;
+  box-sizing: border-box;
   
   .about-me-photo-container {
     text-align: center;
+    width: 100%;
+    height: 20.519%;
     
     > .about-me-photo {
-      width: 150px;
-      height: auto;
+      height: 100%;
+      width: auto;
       aspect-ratio: 1;
+      box-sizing: border-box;
     }
   }
 
   .paragraph-container {
-    margin-top: 0.5rem;
-    padding: 0 1.19%;
+    padding: 0 0.5rem;
     background: colors.$content-bg-color;
     height: 59%;
     overflow-x: hidden;

@@ -7,7 +7,7 @@ const ProjectsListCard = () => {
     <div className="ContentCard ProjectsListCard">
       <h2>Projects</h2>
       <div className="project-cards-container content-box">
-        {Array.from({length: 2}, () => <ProjectCard />)}
+        {Array.from({length: 10}, () => <ProjectCard />)}
       </div>
     </div>
   );
