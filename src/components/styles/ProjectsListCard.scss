@@ -2,11 +2,12 @@
 
 .ProjectsListCard {
   @include ContentCard.contentCard;
+  grid-area: projects;
   display: inline-flex;
   align-items: center;
   flex-direction: column;
   justify-content: space-between;
-  width: 29.28%;
+  width: 100%;
   height: 100%;
   box-sizing: border-box;
 

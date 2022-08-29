@@ -4,7 +4,7 @@
 .ProjectCard {
   display: inline-flex;
   width: 100%;
-  padding: 15px;
+  padding: 3%;
   box-sizing: border-box;
   background: colors.$card-bg-color;
   position: relative;
@@ -23,13 +23,15 @@
   h3 {
     margin: 0;
     text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
   }
 
   .project-card-image-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 26.6%;
+    width: 25%;
     height: auto;
     img {
       width: 100%;

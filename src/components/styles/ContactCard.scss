@@ -1,17 +1,47 @@
 @use "./ContentCard";
 @use "./colors";
+@use "./breakpoints";
 
 .ContactCard {
   @include ContentCard.contentCard;
   width: 100%;
-  box-sizing: border-box;
+  height: 57.59%;
   position: unset;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 57.59%;
+  
+  @media screen and (max-width: breakpoints.$contact-move-breakpoint) {
+    width: 70%;
+    height: 100%;
+    background: none;
+    border: none;
+    box-shadow: none;
+    margin: 0;
+    padding: 15px;
+  }
 
-  > .links-container {
+  > .contact-card-content {
+    height: 70%;
+    min-height: min-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @media screen and (max-width: breakpoints.$contact-move-breakpoint) {
+      align-items: center;
+      flex-direction: row;
+      height: max-content;
+    }
+  }
+
+  .links-container {
+    display: inline-block;
+
+    a {
+      line-break: anywhere;
+    }
 
     > *:first-child {
       margin-top: 0;
@@ -21,17 +51,25 @@
       margin-bottom: 0;
     }
 
-    padding: 20px;
+    padding: 5%;
+    
+    @media screen and (max-width: breakpoints.$contact-move-breakpoint) {
+      width: 80%;
+    }
   }
 
-  > .horizontal-line-separator {
+  .horizontal-line-separator {
     width: 60%;
     margin: 0 20%;
     height: 3px;
     background: colors.$outline-color;
+
+    @media screen and (max-width: breakpoints.$contact-move-breakpoint) {
+      display: none;
+    }
   }
 
-  > .icon-links-container {
+  .icon-links-container {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -41,12 +79,42 @@
       width: auto;
       aspect-ratio: 1;
     }
+
+    @media screen and (max-width: breakpoints.$contact-move-breakpoint) {
+      flex-direction: column;
+      width: 20%;
+
+      > a {
+        height: 40px;
+      }
+    }
   }
 }
 
 .DinoCard {
   @include ContentCard.contentCard;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   box-sizing: border-box;
   position: unset;
+  height: 34.61%;
+  
+  @media screen and (max-width: breakpoints.$contact-move-breakpoint) {
+    width: 40%;
+    height: 100%;
+    background: none;
+    border: none;
+    box-shadow: none;
+    padding: 15px;
+  }
+
+  > canvas {
+    background: rgba(0,0,0,0.1);
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 320 / 168;
+  }
 }
