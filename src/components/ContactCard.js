@@ -9,7 +9,7 @@ const ContactCard = () => {
       <div className="contact-card-content">
         <div className="links-container content-box">
           <p>Email: <a href={`mailto:${email}`}>{email}</a></p>
-          <p>Resume: <a href="#">Click here</a></p>
+          <p>Resume: <a href="https://google.ca">Click here</a></p>
         </div>
         <div className="horizontal-line-separator"></div>
         <div className="icon-links-container">

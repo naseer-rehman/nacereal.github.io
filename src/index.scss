@@ -1,5 +1,6 @@
 @use "./components/styles/normalize";
 @use "./components/styles/colors";
+@use "sass:math";
 
 @font-face {
   font-family: "Poppins";
@@ -62,3 +63,25 @@ img {
     }
   }
 }
+
+::-webkit-scrollbar {
+  width: 0.5vw;
+  height: 0.5vw;
+}
+
+::-webkit-scrollbar-thumb {
+  $idle: 0.4;
+  $active: 1;
+  $hover: math.div($idle + $active, 2);
+  
+  background-color: rgba(77, 77, 77, $idle);
+  
+  &:hover {
+    background-color: rgba(77, 77, 77, $hover);
+  }
+
+  &:active {
+    background-color: rgba(77, 77, 77, $active);
+  }
+}
+

@@ -1,4 +1,5 @@
 @use "./colors";
+@use "sass:math";
 $offset: -6px;
 
 @mixin contentCard() {
@@ -13,7 +14,7 @@ $offset: -6px;
   margin: (-0.5 * $offset) 0 0 (calc((-0.5 * $offset))); // Removed 2vw left/right
   // width: 21.25vw; // Added new
   // max-height: 725px;
-  padding: 25px;
+  padding: 1.30208vw;
   vertical-align: bottom;
   font-size: 1.125rem;
   overflow: hidden;
@@ -21,7 +22,7 @@ $offset: -6px;
 
   h2 {
     text-align: center;
-    font-size: (50 / 16) * 1rem;
+    font-size: math.div(50, 16) * 1rem;
     // margin: 0.6% 0 4.46% 0;
     margin: 0;
   }
