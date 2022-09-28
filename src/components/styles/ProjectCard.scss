@@ -8,7 +8,7 @@
   box-sizing: border-box;
   background: colors.$card-bg-color;
   position: relative;
-  z-index: 1;
+  // z-index: 1;
   $gap-size: 20px;
   margin: math.div($gap-size, 2) 0;
 

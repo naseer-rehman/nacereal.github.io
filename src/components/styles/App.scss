@@ -32,7 +32,7 @@ body {
     grid-template-areas: "about projects contact";
     width: 80.41%; // Added new
     height: 67.12%; // Added new
-    $card-gap: 6.27%;
+    $card-gap: math.div(6.27%, 2);
     grid-gap: $card-gap;
 
     @media screen and (max-width: breakpoints.$contact-move-breakpoint) {
@@ -42,7 +42,7 @@ body {
         "about projects"
         "about projects"
         "contact contact";
-      grid-gap: 50px;
+      grid-gap: ContentCard.$padding * 3;
     }
 
     // > * {
@@ -70,8 +70,8 @@ body {
     height: 100%;
     box-sizing: border-box;
     position: relative;
+    top: -0.5 * ContentCard.$offset;
     left: -0.5 * ContentCard.$offset;
-    overflow: hidden;
     // margin: (-0.5 * ContentCard.$offset) 0 0 (calc((-0.5 * ContentCard.$offset))); // Removed 2vw left/right
 
     @media screen and (max-width: breakpoints.$contact-move-breakpoint) {
@@ -79,6 +79,7 @@ body {
       display: flex;
       flex-direction: row;
       padding: 0;
+      overflow: hidden;
     }
   }
 }

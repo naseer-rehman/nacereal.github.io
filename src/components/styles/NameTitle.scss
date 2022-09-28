@@ -1,4 +1,6 @@
+@use "sass:math";
+
 .NameTitle {
-  font-size: (58 / 16) * 1rem;
+  font-size: math.div(58, 16) * 1rem;
   font-family: "Poppins";
 }

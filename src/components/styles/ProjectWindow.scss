@@ -1,0 +1,217 @@
+@use "./colors";
+@use "./breakpoints";
+@use "./ContentCard";
+@use "sass:math";
+
+$half-padding: math.div(ContentCard.$padding, 2);
+$third-padding: math.div(ContentCard.$padding, 3);
+$fourth-padding: math.div(ContentCard.$padding, 4);
+$eighth-padding: math.div(ContentCard.$padding, 8);
+
+.project-window-frame {
+  @include ContentCard.contentCard;
+
+  box-sizing: border-box;
+  $left-right-padding: ContentCard.$padding * 4;
+  padding-left: $left-right-padding;
+  padding-right: $left-right-padding;
+
+  > .top-buttons-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    height: 10%;
+
+    > button, > a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 50%;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+  }
+
+  > .project-main-content {
+    height: 90%;
+  }
+}
+
+.project-window {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  $blur-alpha: 0.6;
+  background-color: rgba(235,235,235,$blur-alpha);
+
+  > .project-window-frame {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+    width: 65.21%;
+    height: 87.3%;
+    overflow-y: auto;
+    
+    h2 {
+      font-size: 1.65em;
+      text-align: left;
+    }
+  }
+}
+
+.project-main-content {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr;
+  grid-gap: math.div(ContentCard.$padding, 1);
+
+  > .project-aside {
+    width: 100%;
+    height: 100%;
+  }
+
+  > .project-description {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+  }
+}
+
+.project-aside {
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  img {
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1;
+  }
+
+  .project-links-container {
+    padding: math.div(ContentCard.$padding, 1) 0;
+    display: flex;
+    justify-content: space-evenly;
+
+    a {
+      display: flex;
+      align-items: center;
+      box-sizing: border-box;
+      text-decoration: none;
+      width: 20%;
+      padding: math.div(ContentCard.$padding, 3);
+      font-weight: bold;
+      text-transform: uppercase;
+
+      > svg {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1;
+        stroke-width: 1.5px;
+      }
+    }
+  }
+
+  .project-languages-container {
+    > .project-languages-title {
+      font-size: 1.4rem;
+      font-weight: bold;
+    }
+
+    > .project-languages-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      margin: math.div(ContentCard.$padding, 2) 0;
+      padding: 0;
+      list-style-type: none;
+      font-size: 1rem;
+      row-gap: $half-padding;
+
+      > li {
+        border-radius: 999vw;
+        background-color: colors.$content-bg-color;
+        padding: $eighth-padding $third-padding;
+      }
+    }
+  }
+}
+
+.project-description {
+  background-color: colors.$content-bg-color;
+  overflow-y: auto;
+  padding: 0 math.div(ContentCard.$padding, 1);
+}
+
+@media screen and (max-width: breakpoints.$contact-move-breakpoint) {
+  .project-window {
+    > .project-window-frame {
+      overflow-y: auto;
+
+      .project-main-content {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        
+        .project-aside {
+          display: inline-block;
+          overflow: unset;
+          height: max(15vh, 100px);
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          gap: ContentCard.$padding;
+
+          .project-image-container {
+            display: inline-block;
+            height: 100%;
+            width: auto;
+            aspect-ratio: 1;
+          }
+
+          .links-languages-container {
+            height: 100%;
+
+            > .project-links-container {
+              padding: 0;
+              height: 30%;
+              justify-content: right;
+              gap: ContentCard.$padding;
+
+              > a {
+                height: 100%;
+                width: auto;
+                aspect-ratio: 1;
+              }
+            }
+  
+            > .project-languages-container {
+              height: 70%;
+              box-sizing: border-box;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              gap: math.div(ContentCard.$padding, 3);
+
+              > .project-languages-list {
+                gap: math.div(ContentCard.$padding, 3);
+                justify-content: left;
+                margin: 0;
+              }
+            }
+          }
+        }
+    
+        > .project-description {
+          height: auto;
+          overflow: unset;
+        }
+      }
+    }
+  }
+}

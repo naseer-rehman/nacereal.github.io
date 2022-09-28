@@ -1,6 +1,7 @@
 @use "./colors";
 @use "sass:math";
 $offset: -6px;
+$padding: 1.30208vw;
 
 @mixin contentCard() {
   $outline-width: 3px;
@@ -14,12 +15,14 @@ $offset: -6px;
   margin: (-0.5 * $offset) 0 0 (calc((-0.5 * $offset))); // Removed 2vw left/right
   // width: 21.25vw; // Added new
   // max-height: 725px;
-  padding: 1.30208vw;
+  padding: $padding;
   vertical-align: bottom;
   font-size: 1.125rem;
   overflow: hidden;
   // box-sizing: border-box;
 
+  // This should not be set here, I believe this was used for the main content cards (About, Projects, Contact) and they should be set for those cards, individually.
+  // ContentCard > MainContentCard > ProjectCard, AboutCard, ContactCard (idea for a hierarchy)
   h2 {
     text-align: center;
     font-size: math.div(50, 16) * 1rem;
