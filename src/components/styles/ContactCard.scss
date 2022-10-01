@@ -82,9 +82,9 @@
 
   .icon-links-container {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
-    height: 30%;
+    gap: ContentCard.$padding;
     
     > a {
       height: 100%;
