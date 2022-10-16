@@ -1,3 +1,4 @@
+@use "sass:math";
 @use "./ContentCard";
 
 .ProjectsListCard {
@@ -16,8 +17,8 @@
     box-sizing: border-box;
     overflow-x: hidden;
     overflow-y: auto;
-    height: 85.24%;
-    padding: 15px;
+    height: 100%;
+    padding: math.div(ContentCard.$padding, 2);
     display: flex;
     flex-direction: column;
     width: 100%;

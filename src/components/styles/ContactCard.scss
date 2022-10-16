@@ -1,3 +1,4 @@
+@use "sass:math";
 @use "./ContentCard";
 @use "./colors";
 @use "./breakpoints";
@@ -43,8 +44,16 @@
       align-items: center;
       flex-direction: row;
       justify-content: space-evenly;
+      display: flex;
+
+      @media screen and (min-height: 1000px) {
+        justify-content: space-evenly;
+        flex-direction: column;
+      }
     }
   }
+
+
 
   .links-container {
     display: inline-block;
@@ -61,11 +70,15 @@
       margin-bottom: 0;
     }
 
-    padding: 3%;
+    padding: math.div(ContentCard.$padding, 2);
     
     @media screen and (max-width: breakpoints.$contact-move-breakpoint) {
-      width: max-content;
+      min-width: max-content;
       height: max-content;
+
+      @media screen and (min-height: 1000px) {
+        width: 80%;
+      }
     }
   }
 
@@ -85,6 +98,7 @@
     justify-content: center;
     align-items: center;
     gap: ContentCard.$padding;
+    height: 20%;
     
     > a {
       height: 100%;
@@ -100,6 +114,11 @@
 
       > a {
         height: 40px;
+      }
+
+      @media screen and (min-height: 1000px) {
+        flex-direction: row;
+        height: auto;
       }
     }
   }

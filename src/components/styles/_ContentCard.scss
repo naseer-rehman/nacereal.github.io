@@ -3,9 +3,11 @@
 $offset: -6px;
 $padding: 1.30208vw;
 
-@mixin contentCard() {
+@mixin baseContentCard {
   $outline-width: 3px;
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  gap: $padding;
   background: colors.$card-bg-color;
   border: $outline-width solid colors.$outline-color;
   box-shadow: $offset $offset colors.$outline-color;
@@ -44,6 +46,17 @@ $padding: 1.30208vw;
   }
 }
 
-.ContentCard {
-  // @include contentCard;
+@mixin contentCard() {
+  @include baseContentCard;
+
+  .card-content-container {
+    display: inline-block;
+    width: 100%;
+    overflow: hidden;
+    flex-grow: 1;
+  }
 }
+
+// .ContentCard {
+//   // @include contentCard;
+// }

@@ -4,18 +4,20 @@
 .AboutCard {
   @include ContentCard.contentCard;
   grid-area: about;
-  display: inline-flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
   width: 100%;
   height: 100%;
   box-sizing: border-box;
+
+  .card-content-container {
+    display: flex;
+    flex-direction: column;
+    gap: ContentCard.$padding;
+  }
   
   .about-me-photo-container {
     text-align: center;
     width: 100%;
-    height: 20.519%;
+    height: 30%;
     
     > .about-me-photo {
       height: 100%;
@@ -31,5 +33,6 @@
     height: 59%;
     overflow-x: hidden;
     overflow-y: auto;
+    flex-grow: 1;
   }
 }

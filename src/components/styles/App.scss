@@ -75,11 +75,12 @@ body {
     // margin: (-0.5 * ContentCard.$offset) 0 0 (calc((-0.5 * ContentCard.$offset))); // Removed 2vw left/right
 
     @media screen and (max-width: breakpoints.$contact-move-breakpoint) {
-      @include ContentCard.contentCard;
+      @include ContentCard.baseContentCard;
       display: flex;
       flex-direction: row;
       padding: 0;
       overflow: hidden;
+
     }
   }
 }

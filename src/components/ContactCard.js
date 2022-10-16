@@ -6,7 +6,7 @@ const ContactCard = () => {
   return (
     <div className="ContentCard ContactCard">
       <h2>Contact</h2>
-      <div className="contact-card-content">
+      <div className="card-content-container contact-card-content">
         <div className="links-container content-box">
           <p>Email: <a href={`mailto:${email}`}>{email}</a></p>
           <p>Resume: <a href="https://google.ca">Click here</a></p>
