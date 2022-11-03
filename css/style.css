@@ -289,7 +289,7 @@ ul.nav-links > li > a {
     font-weight: bold;
     color: var(--base-text-color);
     border: 0.1em solid;
-    padding: 0.15em 0.25em;
+    padding: 0.2em 0.5em;
     border-radius: 0.4em;
     border-color: var(--base-text-color);
     text-decoration: none;
@@ -491,6 +491,8 @@ div.about-me-paragraph-pair-container:last-child {
 }
 
 div.about-me-paragraph-container {
+    display: flex;
+    align-items: center;
     width: var(--paragraph-width);
 }
 
