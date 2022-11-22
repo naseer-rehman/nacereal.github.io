@@ -9,7 +9,7 @@ $fourth-padding: math.div(ContentCard.$padding, 4);
 $eighth-padding: math.div(ContentCard.$padding, 8);
 
 .project-window-frame {
-  @include ContentCard.contentCard;
+  @include ContentCard.baseContentCard;
 
   box-sizing: border-box;
   $left-right-padding: ContentCard.$padding * 4;

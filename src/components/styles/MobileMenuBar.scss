@@ -1,0 +1,77 @@
+@use "sass:math";
+@use "ContentCard";
+@use "colors";
+
+.MobileMenuBar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &.menu-bar-container {
+    $top-offset: 85%;
+    position: absolute;
+    left: 0;
+    top: $top-offset;
+    width: 100%;
+    height: 100% - $top-offset;
+  }
+
+  .menu-bar {
+    @include ContentCard.baseContentCard;
+    display: flex;
+    flex-direction: row;
+    gap: 0;
+    padding: 0;
+    min-width: max-content;
+    width: 60%;
+    height: 8vh;
+    $menu-item-count: 3;
+    --active-item-index: 2;
+
+    .menu-item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-grow: 1;
+      height: 100%;
+      border: none;
+      padding: 0;
+      margin: 0;
+      background: none;
+
+      &[data-active] .icon-container {
+        background-color: var(--highlight-color);
+      }
+
+      .icon-container {
+        width: auto;
+        height: 60%;
+        aspect-ratio: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: colors.$content-bg-color;
+        border: 1px solid colors.$outline-color;
+        transition: background-color 0.5s;
+
+        svg {
+          fill: colors.$outline-color;
+          aspect-ratio: 1;
+          height: 80%;
+          width: auto;
+        }
+      }
+    }
+
+    .menu-bar-item-highlight {
+      display: inline-block;
+      width: math.div(100%, $menu-item-count);
+      height: 7%;
+      position: absolute;
+      bottom: 0;
+      left: calc(#{math.div(100%, $menu-item-count)} * var(--active-item-index));
+      background-color: darken(colors.$content-bg-color, 25%);
+      transition: left 0.5s, background-color 0.5s;
+    }
+  }
+}

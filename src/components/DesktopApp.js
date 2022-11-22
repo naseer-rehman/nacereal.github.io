@@ -6,7 +6,7 @@ import DinoCard from "./DinoCard";
 
 const DesktopApp = () => {
   return (
-    <div className="App">
+    <div className="App DesktopView">
       <div className="name-title-container">
         <NameTitle />
       </div>

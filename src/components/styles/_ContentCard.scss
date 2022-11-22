@@ -3,6 +3,12 @@
 $offset: -6px;
 $padding: 1.30208vw;
 
+/*
+  baseContentCard (for all content cards)
+    -> desktopBaseContentCard (for all content cards on desktop)
+    -> mobileBaseContentCard (for all content cards on mobile)
+*/
+
 @mixin baseContentCard {
   $outline-width: 3px;
   display: flex;
@@ -46,7 +52,7 @@ $padding: 1.30208vw;
   }
 }
 
-@mixin contentCard() {
+@mixin baseDesktopContentCard() {
   @include baseContentCard;
 
   .card-content-container {
@@ -55,6 +61,11 @@ $padding: 1.30208vw;
     overflow: hidden;
     flex-grow: 1;
   }
+}
+
+@mixin baseMobileContentCard() {
+  @include baseContentCard;
+  
 }
 
 // .ContentCard {
