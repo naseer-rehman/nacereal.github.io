@@ -1,13 +1,41 @@
 @use "./colors";
 
 .header {
+  display: flex;
+  align-items: center;
+
+  position: relative;
   color: colors.$green;
 
-  &__colon, &__dollar {
+  &__colon, &__dollar, &__command-text {
     color: colors.$overlay0;
+  }
+
+  &__dollar {
+    margin-right: 0.5em;
   }
 
   &__tilda {
     color: colors.$blue;
   }
+
+  &__cursor {
+    display: inline-block;
+    background: colors.$overlay0;
+    height: 1em;
+    width: 0.5em;
+  }
+
+  &__cursor--flashing {
+    animation-name: flashing-cursor;
+    animation-duration: 1.1s;
+    animation-iteration-count: infinite;
+  }
+}
+
+@keyframes flashing-cursor {
+  0% {opacity: 1;}
+  50% {opacity: 1;}
+  51% {opacity: 0;}
+  100% {opacity: 0;}
 }
