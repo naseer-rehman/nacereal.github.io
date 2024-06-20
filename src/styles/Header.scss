@@ -1,0 +1,13 @@
+@use "./colors";
+
+.header {
+  color: colors.$green;
+
+  &__colon, &__dollar {
+    color: colors.$overlay0;
+  }
+
+  &__tilda {
+    color: colors.$blue;
+  }
+}
