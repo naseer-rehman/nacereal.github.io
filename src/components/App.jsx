@@ -2,7 +2,8 @@ import '../styles/App.scss'
 import { useState, useEffect, useRef } from "react";
 import Header from "./Header";
 import isUserOnMobile from "../modules/checkMobile.js";
-import AboutMeSection from './AboutMeSection.jsx';
+import AboutMeSection from "./AboutMeSection.jsx";
+import ProjectsSection from "./ProjectsSection.jsx"
 
 function App() {
   // TODO: use something like this for the animation
@@ -24,6 +25,7 @@ function App() {
     <>
       <Header />
       <AboutMeSection />
+      <ProjectsSection />
     </>
   )
 }

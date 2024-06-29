@@ -1,0 +1,66 @@
+@use "../styles/colors";
+
+.projects {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2.5%;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+  padding: 0.75em;
+  width: 170px;
+  min-width: 170px;
+
+  background: colors.$crust;
+  border: 2px solid colors.$surface2;
+  border-radius: 10px;
+
+  color: colors.$subtext1;
+  font-size: 1.1rem;
+
+  &__title-container {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__title {
+    text-align: center;
+    flex-grow: 1;
+  }
+
+  &__img-container {
+    display: flex;
+    justify-content: center;
+    height: 80px;
+  }
+
+  &__img {
+    display: inline-block;
+    aspect-ratio: 1;
+    height: 100%;
+    width: auto;
+    border-radius: 10px;
+    border: 2px solid colors.$surface2;
+    background: colors.$mantle;
+  }
+
+  &__open-button {
+    box-sizing: border-box;
+    text-decoration: none;
+    background: colors.$mantle;
+    border: 2px solid colors.$surface2;
+    border-radius: 8px;
+    padding: 0.1em 1em;
+
+    &:hover {
+      background: darken(colors.$mantle, 5%);
+    }
+  }
+}

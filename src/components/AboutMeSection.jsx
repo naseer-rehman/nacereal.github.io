@@ -2,6 +2,7 @@ import "../styles/AboutMeSection.scss";
 import portraitText from "../modules/portrait";
 import GithubIcon from "./icons/GithubIcon";
 import LinkedinIcon from "./icons/LinkedinIcon";
+import EmailIcon from "./icons/EmailIcon";
 
 const AboutMeRow = ({label, value}) => {
   return <div className="about-me__row">
@@ -13,6 +14,7 @@ const SocialLink = (props) => {
   return (
     <a href={props.href} className="about-me__social-link">
       {props.children}
+      {props.name}
     </a>
   );
 };
@@ -37,8 +39,9 @@ function AboutMeSection() {
         <AboutMeRow label="Interest" value="Cooking, Coding, Canoeing" />
         {/* TODO: Add email link, maybe another icon? */}
         <div className="about-me__socials">
-          <SocialLink href="https://google.ca"><GithubIcon /></SocialLink>
-          <SocialLink href="https://google.ca"><LinkedinIcon /></SocialLink>
+          <SocialLink href="https://google.ca" name="GitHub"><GithubIcon /></SocialLink>
+          <SocialLink href="https://google.ca" name="LinkedIn"><LinkedinIcon /></SocialLink>
+          <SocialLink href="https://google.ca" name="email"><EmailIcon /></SocialLink>
         </div>
       </div>
     </div>
