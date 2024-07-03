@@ -5,6 +5,8 @@
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: min(2vh, 2vw);
 
   &__portrait {
     font-family: "Ubuntu Mono", monospace;

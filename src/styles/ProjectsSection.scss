@@ -4,7 +4,8 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 2.5%;
+  gap: min(2vw, 2vh);
+  margin: auto;
 }
 
 .project-card {
@@ -60,7 +61,7 @@
     padding: 0.1em 1em;
 
     &:hover {
-      background: darken(colors.$mantle, 5%);
+      background: lighten(colors.$mantle, 5%);
     }
   }
 }
