@@ -23,7 +23,7 @@ const SocialLink = (props) => {
 function AboutMeSection() {
   return (
     <div className="about-me">
-      {/* TODO: Change this icon to the bolded version, not the regular version... */}
+      {/* TODO: Change this icon to the bolded version, not the regular version... also maybe a file with smaller size? */}
       <ASCIIPortrait className="about-me__portrait" aria-label="ASCII portrait of Naseer Rehman" />
       <div className="about-me__body">
         <div className="about-me__body-title">
@@ -37,7 +37,6 @@ function AboutMeSection() {
         <AboutMeRow label="CPU" value="B.S. Computer Science (3rd year)" />
         <AboutMeRow label="GPU" value="RX580 that needs to be replaced" />
         <AboutMeRow label="Interest" value="Cooking, Coding, Canoeing" />
-        {/* TODO: Add email link, maybe another icon? */}
         <div className="about-me__socials">
           <SocialLink href="https://google.ca" name="GitHub"><GithubIcon /></SocialLink>
           <SocialLink href="https://google.ca" name="LinkedIn"><LinkedinIcon /></SocialLink>

@@ -2,8 +2,8 @@ import "../styles/Header.scss";
 import { useState } from "react";
 
 function Header() {
-  const [commandText, setCommandText] = useState("");
-
+  const [commandText, setCommandText] = useState("attrociously-long-command -withoptions &stuff");
+  // TODO: determine if the command line should be on a separate line from the user+host text
   return (
     <h1 className="header" aria-label="Naseer Rehman">
       naseer-rehman@mywebsite

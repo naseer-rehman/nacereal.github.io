@@ -5,7 +5,13 @@
   justify-content: center;
   flex-wrap: wrap;
   gap: min(2vw, 2vh);
-  margin: auto;
+  margin: 1em auto;
+}
+
+.mobile .projects {
+  // Yeah, this is probably not great but oh well.
+  flex-grow: 1;
+  overflow-y: scroll;
 }
 
 .project-card {
@@ -64,4 +70,8 @@
       background: lighten(colors.$mantle, 5%);
     }
   }
+}
+
+.mobile-project-card {
+  
 }

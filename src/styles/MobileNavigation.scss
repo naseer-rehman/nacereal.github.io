@@ -23,11 +23,14 @@
     border-style: solid;
     color: colors.$overlay2;
     border-color: colors.$overlay2;
+    text-decoration: none;
   }
 
   &__link--active {
     color: colors.$text;
     border-color: colors.$text;
     background-color: colors.$base;
+    font-weight: bold;
+    // text-decoration: underline;
   }
 }

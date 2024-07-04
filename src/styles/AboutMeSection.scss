@@ -8,18 +8,21 @@
   flex-wrap: wrap;
   gap: 2vmin;
 
+  .mobile & {
+    flex-grow: 1;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+  }
+
   &__portrait {
-    // font-family: "Ubuntu Mono", monospace;
-    // font-size: 0.5rem;
-    // font-weight: bold;
-    // white-space: pre;
     fill: colors.$text;
     width: min(50%, 40vh);
     aspect-ratio: 1;
   }
 
   &__body {
-    font-size: clamp(0.5rem, 4vmin, 1.5rem);
+    font-size: clamp(0.5rem, 3.5vmin, 1.3rem);
     width: max-content;
   }
 
@@ -63,7 +66,7 @@
 
     > svg {
       aspect-ratio: 1;
-      height: 2em;
+      height: 1.75em;
       width: auto;
       fill: colors.$text;
     }
