@@ -1,7 +1,7 @@
 const GithubIcon = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    fill="none"
+    // fill="none"
     viewBox="0 0 42 42"
     {...props}
   >

@@ -1,6 +1,7 @@
 @use "./colors";
 
 .about-me {
+  // TODO: Make about me section wider on mobile devices
   margin: 5% auto;
   display: flex;
   align-items: center;
@@ -13,6 +14,10 @@
     flex-wrap: nowrap;
     flex-direction: column;
     justify-content: center;
+    margin: 0;
+    gap: 10vmin;
+    overflow-y: scroll;
+    overflow-x: hidden;
   }
 
   &__portrait {
@@ -22,7 +27,7 @@
   }
 
   &__body {
-    font-size: clamp(0.5rem, 3.5vmin, 1.3rem);
+    font-size: clamp(0.5rem, 3.9vmin, 1.3rem);
     width: max-content;
   }
 

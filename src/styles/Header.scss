@@ -8,8 +8,44 @@
   position: relative;
   color: colors.$green;
 
+  &__hostline {
+    position: relative;
+    text-wrap: nowrap;
+  }
+
+  &__new-message {
+    font-size: 0.75em;
+    font-family: Minecraftia;
+    position: absolute;
+    left: 100%;
+    top: 100%;
+    translate: -50% -50%;
+    rotate: -20deg;
+    $yellow: #e1e108;
+    $brown: #404000;
+    $outline: #404000; //rgba(0,0,0,1);
+    color: $yellow;
+    font-weight: bold;
+    text-shadow:
+      $outline 0px 0px 1px,   $outline 0px 0px 1px,   $outline 0px 0px 1px,
+      $outline 0px 0px 1px,   $outline 0px 0px 1px,   $outline 0px 0px 1px,
+      $outline 0px 0px 1px,   $outline 0px 0px 1px,   $outline 0px 0px 1px,
+      $outline 0px 0px 1px,   $outline 0px 0px 1px,   $outline 0px 0px 1px,
+      $outline 0px 0px 1px,   $outline 0px 0px 1px,   $outline 0px 0px 1px,
+      $outline 0px 0px 1px,   $outline 0px 0px 1px,   $outline 0px 0px 1px,
+      $outline 5px 5px 0px;
+    animation-name: new-message-anim;
+    animation-duration: 0.55s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-out;
+  }
+
   &__colon, &__dollar, &__command-text {
     color: colors.$overlay0;
+  }
+
+  &__command-text {
+    word-wrap: break-word;
   }
 
   &__dollar {
@@ -37,7 +73,7 @@
 }
 
 .mobile .header {
-  margin: 1rem;
+  margin: 0 1rem;
 }
 
 @keyframes flashing-cursor {
@@ -45,4 +81,10 @@
   50% {opacity: 1;}
   51% {opacity: 0;}
   100% {opacity: 0;}
+}
+
+@keyframes new-message-anim {
+  0% {transform: scale(0.95);}
+  50% {transform: scale(1.05);}
+  100% {transform: scale(0.95);}
 }
