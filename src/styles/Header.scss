@@ -2,7 +2,8 @@
 
 .header {
   align-items: center;
-  font-size: 1.5rem;
+  // font-size: calc(0.75rem + 1.5vh); TODO: figure out proper font scaling
+  font-size: clamp(0.5rem, 4.3vw, 1.5rem);
 
   position: relative;
   color: colors.$green;
@@ -33,6 +34,10 @@
     position: relative;
     top: 0.125em;
   }
+}
+
+.mobile .header {
+  margin: 1rem;
 }
 
 @keyframes flashing-cursor {

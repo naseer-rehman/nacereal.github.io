@@ -3,6 +3,7 @@ import portraitText from "../modules/portrait";
 import GithubIcon from "./icons/GithubIcon";
 import LinkedinIcon from "./icons/LinkedinIcon";
 import EmailIcon from "./icons/EmailIcon";
+import ASCIIPortrait from "./icons/ASCIIPortrait";
 
 const AboutMeRow = ({label, value}) => {
   return <div className="about-me__row">
@@ -22,9 +23,8 @@ const SocialLink = (props) => {
 function AboutMeSection() {
   return (
     <div className="about-me">
-      <div className="about-me__portrait" aria-label="ASCII portrait of Naseer Rehman">
-        {portraitText}
-      </div>
+      {/* TODO: Change this icon to the bolded version, not the regular version... */}
+      <ASCIIPortrait className="about-me__portrait" aria-label="ASCII portrait of Naseer Rehman" />
       <div className="about-me__body">
         <div className="about-me__body-title">
           naseer-rehman@my-website<br/>

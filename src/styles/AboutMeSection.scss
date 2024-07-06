@@ -6,17 +6,20 @@
   align-items: center;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  gap: min(2vh, 2vw);
+  gap: 2vmin;
 
   &__portrait {
-    font-family: "Ubuntu Mono", monospace;
-    font-size: 0.5rem;
-    font-weight: bold;
-    white-space: pre;
+    // font-family: "Ubuntu Mono", monospace;
+    // font-size: 0.5rem;
+    // font-weight: bold;
+    // white-space: pre;
+    fill: colors.$text;
+    width: min(50%, 40vh);
+    aspect-ratio: 1;
   }
 
   &__body {
-    font-size: 1.25rem;
+    font-size: clamp(0.5rem, 4vmin, 1.5rem);
     width: max-content;
   }
 
