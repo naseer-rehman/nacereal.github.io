@@ -1,0 +1,36 @@
+@use "./colors";
+
+.mobile-nav-container {
+  display: flex;
+  justify-content: center;
+}
+
+.mobile-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  gap: 1em;
+  background: colors.$surface0;
+  border-radius: 1000vw;
+  padding: 0.5em;
+  // width: 50vw;
+  // margin: auto;
+
+  &__link {
+    padding: 0.25em 0.5em;
+    border-radius: 1000vw;
+    border-width: 2px;
+    border-style: solid;
+    color: colors.$overlay2;
+    border-color: colors.$overlay2;
+    text-decoration: none;
+  }
+
+  &__link--active {
+    color: colors.$text;
+    border-color: colors.$text;
+    background-color: colors.$base;
+    font-weight: bold;
+    // text-decoration: underline;
+  }
+}

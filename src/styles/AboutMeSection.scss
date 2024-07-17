@@ -1,0 +1,83 @@
+@use "./colors";
+
+.about-me {
+  // TODO: Make about me section wider on mobile devices
+  margin: 5% auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 2vmin;
+
+  .mobile & {
+    flex-grow: 1;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+    gap: 10vmin;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+    &__body {
+      width: initial;
+    }
+  }
+
+  &__portrait {
+    fill: colors.$text;
+    width: min(50%, 40vh);
+    aspect-ratio: 1;
+  }
+
+  &__body {
+    font-size: clamp(0.5rem, 3.9vmin, 1.3rem);
+    width: max-content;
+  }
+
+  &__body-title {
+    font-weight: bold;
+  }
+
+  &__label {
+    // color: colors.$subtext1;
+    font-weight: bold;
+  }
+
+  &__label-text {
+    color: colors.$subtext1;
+  }
+
+  &__socials {
+    margin-top: 1em;
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+  }
+
+  &__social-link {
+    fill: colors.$text;
+    stroke: colors.$text;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+
+
+    &:hover > svg {
+      fill: lighten(colors.$text, 25%);
+      stroke: lighten(colors.$text, 25%);
+    }
+
+    &:hover {
+      color: lighten(colors.$text, 25%);
+      stroke: lighten(colors.$text, 25%);
+    }
+
+    > svg {
+      aspect-ratio: 1;
+      height: 1.75em;
+      width: auto;
+      fill: colors.$text;
+    }
+  }
+}
