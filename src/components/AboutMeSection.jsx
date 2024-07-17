@@ -11,11 +11,11 @@ const AboutMeRow = ({label, value}) => {
   </div>;
 };
 
-const SocialLink = (props) => {
+const SocialLink = ({href, children, name, ...props}) => {
   return (
-    <a href={props.href} className="about-me__social-link">
-      {props.children}
-      {props.name}
+    <a href={href} className="about-me__social-link" {...props}>
+      {children}
+      {name}
     </a>
   );
 };
@@ -31,16 +31,16 @@ function AboutMeSection() {
           ------------------------
         </div><br/>
         <AboutMeRow label="OS" value="Naseer Rehman on naseer.io" />
-        <AboutMeRow label="Kernel" value="Corn" />
-        <AboutMeRow label="Shell" value="Turtle" />
+        <AboutMeRow label="Experience" value="Front-End Developer, SQA Analyst" />
+        <AboutMeRow label="Languages" value="C++, C, JS, Java, Python, SQL" />
         <AboutMeRow label="Theme" value="Problem-solver, Challenge-seeker" />
-        <AboutMeRow label="CPU" value="B.S. Computer Science (3rd year)" />
+        <AboutMeRow label="CPU" value="3rd B.S. Computer Science" />
         <AboutMeRow label="GPU" value="RX580 that needs to be replaced" />
-        <AboutMeRow label="Interest" value="Cooking, Coding, Canoeing" />
+        <AboutMeRow label="Interests" value="Exercising, Coding, Gaming" />
         <div className="about-me__socials">
-          <SocialLink href="https://google.ca" name="GitHub"><GithubIcon /></SocialLink>
-          <SocialLink href="https://google.ca" name="LinkedIn"><LinkedinIcon /></SocialLink>
-          <SocialLink href="https://google.ca" name="email"><EmailIcon /></SocialLink>
+          <SocialLink href="https://github.com/naseer-rehman" name="GitHub" target="_blank"><GithubIcon /></SocialLink>
+          <SocialLink href="https://www.linkedin.com/in/naseer-rehman/" name="LinkedIn" target="_blank"><LinkedinIcon /></SocialLink>
+          <SocialLink href="mailto:rehmn.nas@gmail.com" name="email"><EmailIcon /></SocialLink>
         </div>
       </div>
     </div>

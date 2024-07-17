@@ -18,6 +18,10 @@
     gap: 10vmin;
     overflow-y: scroll;
     overflow-x: hidden;
+
+    &__body {
+      width: initial;
+    }
   }
 
   &__portrait {
